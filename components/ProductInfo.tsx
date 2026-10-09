@@ -162,6 +162,24 @@ export default function ProductInfo() {
             </span>
           ))}
         </div>
+
+        <div className="group relative mt-3 inline-block">
+          <span
+            tabIndex={0}
+            aria-describedby="msi-tooltip"
+            className="cursor-help text-xs font-medium text-forest underline decoration-dotted underline-offset-2 transition-colors hover:text-forest-light focus:outline-none focus-visible:ring-2 focus-visible:ring-forest-light"
+          >
+            Hasta 12 meses sin intereses
+          </span>
+          <span
+            id="msi-tooltip"
+            role="tooltip"
+            className="pointer-events-none absolute bottom-full left-0 z-10 mb-2 w-56 rounded-lg bg-charcoal px-3 py-2 text-xs leading-snug text-white opacity-0 shadow-lg transition-opacity group-hover:opacity-100 group-focus-within:opacity-100"
+          >
+            En el checkout verás las tarjetas que aplican a meses sin intereses.
+            <span className="absolute left-4 top-full -mt-1 h-2 w-2 rotate-45 bg-charcoal" />
+          </span>
+        </div>
       </div>
 
       <div>

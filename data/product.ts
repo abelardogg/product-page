@@ -39,14 +39,14 @@ export const product: Product = {
   name: "Asador Profesional Camping",
   brand: "ABX Camping",
   images: [
-    "/images/asador-1.jpg",
-    "/images/asador-2.jpg",
-    "/images/asador-3.jpg",
+    "/images/asador1.webp",
+    "/images/asador2.webp",
+    "/images/asador3.webp",
   ],
   description:
     "Asador portátil de acero inoxidable, ideal para camping y parrilladas al aire libre. Diseño plegable, fácil de transportar y montar.",
   longDescription:
-    "Fabricado con acero inoxidable de alta resistencia, este asador profesional te permite disfrutar de parrilladas donde quieras. Su sistema de patas plegables y maletín incluido lo hacen perfecto para llevarlo de camping. La parrilla ajustable en altura te da control total sobre la cocción de tus alimentos. Incluye gancho para herramientas y bolsa de transporte.",
+    "Este asador profesional se pliega sobre sí mismo hasta quedar del tamaño de un maletín de 43 x 26 cm, con broches de seguridad y asa para llevarlo donde quieras. Armado mide 43 cm de ancho, 26 de fondo y 46 de alto. La parrilla de acero inoxidable se ajusta en altura para controlar la cocción, y la tapa abatible protege las brasas del viento. Incluye espátula, pinzas y dos brochetas con mango de madera.",
   price: 1899,
   variants: [
     { id: "med", label: "Mediano (60cm)", price: 1599 },
@@ -55,25 +55,24 @@ export const product: Product = {
   ],
   specs: [
     { label: "Material", value: "Acero inoxidable" },
-    { label: "Peso", value: "8.5 kg" },
-    { label: "Dimensiones armado", value: "80x40x90 cm" },
-    { label: "Dimensiones plegado", value: "85x40x12 cm" },
-    { label: "Capacidad", value: "8-10 personas" },
+    { label: "Ancho", value: "43 cm" },
+    { label: "Fondo", value: "26 cm" },
+    { label: "Alto", value: "46 cm" },
+    { label: "Plegado", value: "43 x 26 cm — tipo maletín" },
+    { label: "Incluye", value: "Espátula, pinzas y 2 brochetas" },
   ],
   features: [
-    "Acero inoxidable resistente a la intemperie",
-    "Plegable en segundos — sin herramientas",
-    "Incluye bolsa de transporte",
-    "Parrilla ajustable en 3 alturas",
-    "Gancho lateral para utensilios",
-    "Fácil limpieza — bandeja extraíble",
+    "Parrilla de acero inoxidable ajustable en altura",
+    "Se pliega tipo maletín y cierra con broches de seguridad",
+    "Patas plegables — se arma sin herramientas",
+    "Asa de transporte integrada",
+    "Incluye espátula, pinzas y 2 brochetas con mango de madera",
+    "Tapa abatible que protege del viento",
   ],
   paymentMethods: [
     "Tarjetas de crédito/débito",
     "PayPal",
     "Transferencia bancaria",
-    "Pago en OXXO",
-    "Hasta 12 meses sin intereses",
   ],
   reviews: [
     {
@@ -112,7 +111,7 @@ export const product: Product = {
       id: "f2",
       question: "¿Se puede usar en superficies irregulares?",
       answer:
-        "Sí, las patas tienen niveladores individuales que se adaptan a terrenos irregulares como pasto o arena.",
+        "Sí, las cuatro patas son anchas en la base y reparten el peso, así que se sostiene bien en pasto o arena compacta. En terreno muy desnivelado conviene buscar una superficie plana.",
     },
     {
       id: "f3",
@@ -122,9 +121,9 @@ export const product: Product = {
     },
     {
       id: "f4",
-      question: "¿La bolsa de transporte es impermeable?",
+      question: "¿Cómo se transporta?",
       answer:
-        "Sí, la bolsa incluye un recubrimiento impermeable para proteger el asador durante el transporte y almacenamiento.",
+        "Se pliega sobre sí mismo hasta quedar como un maletín de 43 x 26 cm. Los broches laterales lo mantienen cerrado y el asa integrada te permite cargarlo con una mano. Los utensilios viajan dentro.",
     },
   ],
 };

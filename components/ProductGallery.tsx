@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -25,13 +26,16 @@ export default function ProductGallery({ images, productName }: Props) {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -50 }}
             transition={{ duration: 0.3 }}
-            className="flex h-full w-full items-center justify-center"
+            className="relative h-full w-full"
           >
-            <div className="text-center text-charcoal-light">
-              <div className="mb-2 text-6xl">🔥</div>
-              <p className="text-lg font-medium">{productName}</p>
-              <p className="text-sm">Imagen {current + 1} de {images.length}</p>
-            </div>
+            <Image
+              src={images[current]}
+              alt={`${productName} — imagen ${current + 1} de ${images.length}`}
+              fill
+              priority={current === 0}
+              sizes="(min-width: 1024px) 50vw, 100vw"
+              className="object-cover"
+            />
           </motion.div>
         </AnimatePresence>
 
@@ -62,7 +66,7 @@ export default function ProductGallery({ images, productName }: Props) {
       </div>
 
       <div className="flex gap-3 overflow-x-auto pb-1">
-        {images.map((_, i) => (
+        {images.map((src, i) => (
           <button
             key={i}
             onClick={() => setCurrent(i)}
@@ -72,8 +76,14 @@ export default function ProductGallery({ images, productName }: Props) {
                 : "border-transparent opacity-60 hover:opacity-100"
             }`}
           >
-            <div className="flex h-full w-full items-center justify-center rounded-md bg-sand-dark text-lg">
-              🔥
+            <div className="relative h-full w-full overflow-hidden rounded-md bg-sand-dark">
+              <Image
+                src={src}
+                alt={`${productName} — miniatura ${i + 1}`}
+                fill
+                sizes="64px"
+                className="object-cover"
+              />
             </div>
           </button>
         ))}

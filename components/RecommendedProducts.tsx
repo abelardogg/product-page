@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { ShoppingCart } from "lucide-react";
 
 const recommendations = [
@@ -5,21 +6,21 @@ const recommendations = [
     id: "pizza-stone",
     name: "Piedra para Pizza",
     price: 349,
-    emoji: "🍕",
+    image: "/images/piedra.webp",
     desc: "Perfecta para pizzas crujientes en tu asador",
   },
   {
     id: "cover",
     name: "Funda Protectora",
     price: 199,
-    emoji: "🛡️",
+    image: "/images/funda.jpg",
     desc: "Funda impermeable para proteger tu asador",
   },
   {
     id: "tool-set",
     name: "Set de Utensilios",
     price: 449,
-    emoji: "🔪",
+    image: "/images/utensilios.webp",
     desc: "Espátula, pinzas y cepillo, todo en uno",
   },
 ];
@@ -36,8 +37,14 @@ export default function RecommendedProducts() {
             key={rec.id}
             className="group rounded-xl border border-sand-dark bg-white p-4 transition-all hover:border-forest-light hover:shadow-lg"
           >
-            <div className="mb-3 flex h-32 items-center justify-center rounded-lg bg-sand text-5xl">
-              {rec.emoji}
+            <div className="relative mb-3 h-32 overflow-hidden rounded-lg bg-sand">
+              <Image
+                src={rec.image}
+                alt={rec.name}
+                fill
+                sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                className="object-contain"
+              />
             </div>
             <h3 className="font-semibold text-charcoal">{rec.name}</h3>
             <p className="mb-3 text-sm text-charcoal-light">{rec.desc}</p>
